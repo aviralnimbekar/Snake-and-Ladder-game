@@ -30,11 +30,26 @@ public class UtilityClass {
         if (condition == LADDER) {
             System.out.println("<LADDER>");
             player += dice;                    //adding dice value for one more time in to current position
+
+            //upper limit
+            if (player > 100) {
+                player -= (2 * dice);
+            }
         } else if (condition == SNAKE) {
             System.out.println("<SNAKE>");
             player -= dice;                    //subtracting dice value from current position
+
+            //lower limit
+            if (player < 0) {
+                player = 0;
+            }
         } else {
             System.out.println("<NOPLAY>");    //in case of no play player remains in current position
+
+            //upper limit
+            if (player > 100) {
+                player -= dice;
+            }
         }
         return player;
     }

@@ -4,7 +4,7 @@ package com.Bridgelabs;
  * Objective - Simulates Snake & Ladder game
  *
  * @author - Aviral N
- * @version - 1.4
+ * @version - 1.5
  * date     - 12-08-2021
  */
 public class SnakeLadder {
@@ -17,11 +17,11 @@ public class SnakeLadder {
         UtilityClass dice = new UtilityClass();            //Object of utility class
 
         //using a while loop to repeat entire steps till winning point
-        while (player1 <= 100) {
+        while (player1 != 100) {
 
             //Rolling dice
             player1 += dice.rollDice();                        //Calling diceRoll method
-            System.out.println("Position " + player1);
+            System.out.println("Intermediate Position " + player1);
 
             //Checking for condition - Snake Ladder or Noplay
             player1 = dice.option(player1);                    //Calling option method for Snake Ladder or NoPlay
